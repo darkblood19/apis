@@ -8,10 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión a MongoDB Atlas
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('Conectado a MongoDB Atlas'))
-  .catch(err => console.error('Error de conexión:', err));
-
+mongoose.connect(
+"mongodb+srv://dracko12:saavedra12.@cluster0.uuia5ow.mongodb.net/?appName=Cluster0"
+)
 // Esquema de datos (debe coincidir con tu app Android)
 const SensorSchema = new mongoose.Schema({
   timestamp: Number,
